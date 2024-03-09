@@ -8,5 +8,5 @@ edition = "2021"
 
 [dependencies]
 clap = { version = "4.5.2", features = ["derive"]}
-unity_unpacker_lib = { path = "./unity_unpacker_lib" }
+unity_unpacker_lib = { git = "https://github.com/DirkChristianBecker/unity_unpacker_lib" }
 rust-tools = { git = "https://github.com/DirkChristianBecker/rust-tools"}

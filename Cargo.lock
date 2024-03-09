@@ -273,12 +273,22 @@ version = "0.1.0"
 dependencies = [
  "clap",
  "rust-tools",
- "unity_unpacker_lib",
+ "unity_unpacker_lib 0.1.0 (git+https://github.com/DirkChristianBecker/unity_unpacker_lib)",
 ]
 
 [[package]]
 name = "unity_unpacker_lib"
 version = "0.1.0"
+dependencies = [
+ "flate2",
+ "rust-tools",
+ "tar",
+]
+
+[[package]]
+name = "unity_unpacker_lib"
+version = "0.1.0"
+source = "git+https://github.com/DirkChristianBecker/unity_unpacker_lib#1afcf39f5388fae8d53dfeabfedd674e60980db7"
 dependencies = [
  "flate2",
  "rust-tools",
