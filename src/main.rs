@@ -14,14 +14,14 @@ struct Args {
 
     /// Number of times to greet
     #[arg(short, long)]
-    tmp_dir: Option<String>,
+    target_dir: Option<String>,
 }
 
 fn main() {
     let args = Args::parse();
     let package = UnityPackage::new(&args.file_name).unwrap();
     let r : Result<PathBuf, UnityPackageReaderError>;
-    if let Some(s) = args.tmp_dir {
+    if let Some(s) = args.target_dir {
         let p = &Path::new(&s);
         r = package.unpack_package(Some(p));        
     } else {
@@ -34,7 +34,14 @@ fn main() {
         },
         Err(e) => {
             // eprint!("\x1b[93mCould not extract {}. Error: {}", args.file_name, e);
-            eprintln!("{}error: {}Could not extract {} because: {}", Console::FAIL, Console::RESET, args.file_name, e);
+            eprintln!("{}error: {}Could not extract the file '{}{}{}'. {}{}.", 
+                Console::FAIL, 
+                Console::RESET, 
+                Console::OK_BLUE, 
+                args.file_name,
+                Console::RESET,
+                Console::RED,
+                e);
         },
     }
 }
