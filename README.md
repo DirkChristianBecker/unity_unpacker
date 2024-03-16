@@ -1,7 +1,7 @@
 # Unity Unpacker
 Unity Unpacker is a command line program designed to unpack '.unitypackage' files. 
 
-# Usage
+## Usage
 Unity unpacker requires at least one parameter, the file name. So running the programm with 
 ```
 ./unity_unpacker -f test.unitypackage
@@ -16,5 +16,5 @@ However, using the 'dir' parameter the target directory can be passed to the too
 
 All directories the tool needs to unpack the package will be created.
 
-# Assets
+## Assets
 All assets are from https://opengameart.org and are licenced as CC0.
