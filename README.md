@@ -1,6 +1,8 @@
 # Unity Unpacker
 'Unity Unpacker' is a command line tool designed to unpack '.unitypackage' files. 
+
 '.unitypackage' files are essentially gzip/tar archives that contain a directory for each asset in a unity project. The name of the directory is the guid that was assigned to the asset by the Unity Editor. Each asset has an accompanying '.meta' file that contains import information for the Unity Editor/Engine. 
+
 What this tool does is first unpack the package into a temporary directory and after that moving the assets and the accompanying meta files over to the target directory. The tool will create all directories the package contains, so it reflects the folder structure of the package in the Unity Editor. However the extension '.meta' will be changed to '.unitymeta' since the meta extension is a bit to generic and creates conflicts with other game engines.  
 
 ## Usage
